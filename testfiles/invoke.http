@@ -1,0 +1,49 @@
+#@url=localhost:8080
+@url=localhost:5000
+
+###
+POST http://{{url}}/ws HTTP/1.1
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"			  
+xmlns:gs="http://mikecarr.net/ws/employees-web-service">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gs:getEmployeeRequest>
+         <gs:name>Mike Carr</gs:name>
+      </gs:getEmployeeRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+###
+POST http://{{url}}/ws HTTP/1.1
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"			  
+xmlns:gs="http://mikecarr.net/ws/employees-web-service">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gs:addEmployeeRequest>
+        <gs:id>29</gs:id>
+        <gs:name>Mike Carr</gs:name>
+        <gs:title>Vice President</gs:title>
+        <gs:dept>ENGINEERING</gs:dept>
+      </gs:addEmployeeRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+###
+
+
+GET http://{{url}}/actuator HTTP/1.1
+
+###
+GET http://{{url}}/actuator/loggers HTTP/1.1
+
+###
+
+###
+POST http://{{url}}/actuator/loggers/ROOT HTTP/1.1
+Content-Type: application/json;
+
+{
+    "configuredLevel": "DEBUG"
+}
