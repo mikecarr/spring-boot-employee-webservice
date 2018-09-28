@@ -7,7 +7,7 @@ logs/
 
 target/
 
-ws/*
+**/employees_web_service/
 
 .idea
 *.iml

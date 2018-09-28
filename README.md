@@ -8,12 +8,18 @@ WSDL http://localhost:8080/employee/ws/employees.wsdl
 mvn clean package spring-boot:run
 ```
 
-## Log Level
+### Log Level
 
 ```console
-curl -X "POST" "http://localhost:8080/actuators/loggers/" -H "Content-Type: application/json; charset=utf-8" -d $'{   "configuredLevel": "WARN" }'  
+curl -X "POST" "http://localhost:8080/manage/loggers/" -H "Content-Type: application/json; charset=utf-8" -d $'{   "configuredLevel": "WARN" }'  
 ```
 
+### Monitoring
+* http://localhost:8080/manage/
+* http://localhost:8080/manage/health
+
+#### Swagger
+* http://localhost:8080/swagger-ui.html
 
 ## Docker
 
