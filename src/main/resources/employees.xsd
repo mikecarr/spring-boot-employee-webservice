@@ -1,7 +1,7 @@
 
 <xs:schema 
 	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-	xmlns:tns="http://mikecarr.net/ws/employees-web-service" targetNamespace="http://mikecarr.net/ws/employees-web-service" elementFormDefault="qualified">
+	xmlns:tns="http://mikecarr.net/employee/ws/employees-web-service" targetNamespace="http://mikecarr.net/employee/ws/employees-web-service" elementFormDefault="qualified">
 	<xs:element name="addEmployeeRequest">
 		<xs:complexType>
 			<xs:sequence>

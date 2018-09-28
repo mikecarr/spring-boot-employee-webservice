@@ -20,15 +20,15 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 		MessageDispatcherServlet servlet = new MessageDispatcherServlet();
 		servlet.setApplicationContext(applicationContext);
 		servlet.setTransformWsdlLocations(true);
-		return new ServletRegistrationBean(servlet, "/ws/*");
+		return new ServletRegistrationBean(servlet, "/employee/*");
 	}
 
 	@Bean(name = "employees")
 	public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema countriesSchema) {
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
 		wsdl11Definition.setPortTypeName("EmployeesPort");
-		wsdl11Definition.setLocationUri("/ws");
-		wsdl11Definition.setTargetNamespace("http://mikecarr.net/ws/employees-web-service");
+		wsdl11Definition.setLocationUri("/employee");
+		wsdl11Definition.setTargetNamespace("http://mikecarr.net/employee/ws/employees-web-service");
 		wsdl11Definition.setSchema(countriesSchema);
 		return wsdl11Definition;
 	}

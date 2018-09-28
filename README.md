@@ -1,5 +1,7 @@
 # Spring Boot Webservice Project
 
+WSDL http://localhost:8080/employee/ws/employees.wsdl
+
 ## Running
 
 ```console

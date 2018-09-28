@@ -1,5 +1,5 @@
 #@url=localhost:8080
-@url=localhost:5000
+@url=localhost:8080
 
 ###
 POST http://{{url}}/ws HTTP/1.1
@@ -15,10 +15,10 @@ xmlns:gs="http://mikecarr.net/ws/employees-web-service">
 </soapenv:Envelope>
 
 ###
-POST http://{{url}}/ws HTTP/1.1
+POST http://{{url}}/employee HTTP/1.1
 
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"			  
-xmlns:gs="http://mikecarr.net/ws/employees-web-service">
+xmlns:gs="http://mikecarr.net/employee/ws/employees-web-service">
    <soapenv:Header/>
    <soapenv:Body>
       <gs:addEmployeeRequest>
@@ -40,10 +40,13 @@ GET http://{{url}}/actuator/loggers HTTP/1.1
 
 ###
 
-###
 POST http://{{url}}/actuator/loggers/ROOT HTTP/1.1
 Content-Type: application/json;
 
 {
     "configuredLevel": "DEBUG"
 }
+
+###
+
+GET http://{{url}}/ HTTP/1.2
