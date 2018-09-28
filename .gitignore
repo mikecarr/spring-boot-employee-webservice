@@ -8,3 +8,6 @@ logs/
 target/
 
 ws/*
+
+.idea
+*.iml
