@@ -7,6 +7,9 @@
 	<artifactId>spring-boot-webservice</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<name>spring-boot-webservice</name>
+	
+	<packaging>war</packaging>
+	
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
 	<parent>
@@ -54,6 +57,7 @@
 		</dependency>
 	</dependencies>
 	<build>
+		<finalName>ROOT</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
